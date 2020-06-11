@@ -1,0 +1,31 @@
+.clearfix:after {
+  display: block;
+  content: '.';
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+.overflow {
+  max-width: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iconfont {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  padding: 2px 12px;
+  margin: 0 2px;
+  color: #e0e0e0;
+  background: #fff;
+}
+
+.icon-back:hover,
+.icon-more:hover {
+  color: #fff;
+  background: #ff6700;
+}
+/*# sourceMappingURL=FlashBar.css.map */

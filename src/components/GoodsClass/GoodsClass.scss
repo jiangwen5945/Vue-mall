@@ -1,0 +1,35 @@
+.googs-class {
+   
+    
+    .block-box{
+        display: flex;
+    }
+
+    .left-box {
+        width: 234px;
+        height: 614px;
+        float: left;
+        margin-right: 14px;
+        margin-bottom: 10px;
+        // 过渡效果
+        transition: all 0.5s;
+        &:hover {
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translate3d(0, -2px, 0);
+        }
+
+        img {
+            width: 234px;
+            height: 614px;
+        }
+    }
+    .right-box {
+        width: 100%;
+        min-height: 614px;
+        float: left;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        // align-content: space-between;
+    }
+}

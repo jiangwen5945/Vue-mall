@@ -1,0 +1,275 @@
+{
+  "status": "0",
+  "msg": "",
+  "result": [
+    {
+      "GoodList1": [
+        {
+          "title": "默认标题",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "001",
+          "cardType": 1
+        },
+        {
+          "title": "默认标题",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "002",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "003",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "003",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 3
+        }
+      ],
+      "GoodList2": [
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 3
+        }
+      ],
+      "GoodList3": [
+        {
+          "title": "默认标题1",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题2",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题3",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题4",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题5",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题6",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题7",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题8",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题9",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        },
+        {
+          "title": "默认标题10",
+          "bgColor": "#fff",
+          "price": "默认价格",
+          "explain": "默认描述",
+          "goodsImgUrl": "http://dummyimage.com/160x160",
+          "goodsUrl": "#",
+          "cardType": 2
+        }
+      ]
+    }
+  ]
+}

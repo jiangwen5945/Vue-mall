@@ -1,0 +1,118 @@
+.clearfix:after {
+  display: block;
+  content: '.';
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+.overflow {
+  max-width: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.video-box {
+  width: 296px;
+  height: 285px;
+  background: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+
+.video-box:hover {
+  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translate3d(0, -2px, 0);
+          transform: translate3d(0, -2px, 0);
+}
+
+.video-box .img-wrapper {
+  color: #fff;
+}
+
+.video-box .img-wrapper:hover {
+  color: #ff6700;
+}
+
+.video-box .img-wrapper i {
+  font-size: 32px;
+  position: absolute;
+  top: 137px;
+  left: 20px;
+}
+
+.video-box .title {
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 20px 0 0 0;
+}
+
+.video-box .title:hover {
+  color: #ff6700;
+}
+
+.video-box .desc {
+  color: #b0b0b0;
+  font-size: 12px;
+  background: #fff;
+  text-align: center;
+  line-height: 18px;
+}
+
+.player {
+  width: 880px;
+  height: 536px;
+  background: #000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.player .player-top {
+  width: 880px;
+  height: 60px;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.player .player-top h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 840px;
+  height: 32px;
+  margin: 14px 20px;
+  color: #424242;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.player .player-top a {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  background: #e0e0e0;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.player .player-top a:hover {
+  background: #ff6700;
+}
+/*# sourceMappingURL=VideoCard.css.map */
