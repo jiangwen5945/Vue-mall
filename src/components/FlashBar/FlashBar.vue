@@ -43,6 +43,7 @@ export default {
   },
   computed: {
     getFormatArray: function() {
+      // this is dev
       // function deepClone(item) {
       //   const target = item.constructor === Array ? [] : {};
       //   for (let keys in item) {
