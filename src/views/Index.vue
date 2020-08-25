@@ -1,30 +1,32 @@
 <template>
-  <div class="GoodsList">
+  <div class="container">
     <category :categoryList="categoryList">
       <ad-swiper :slideList="slideList"></ad-swiper>
     </category>
-    <div class="bg-box">
-      <div class="container" style="background:#eee">
-        <flash-bar :GoodList="goodsListData.GoodList3"></flash-bar>
-        <banner></banner>
-        <goods-class :GoodList="goodsListData.GoodList1">
-          <template v-slot:title>默认模块1</template>
-          <template v-slot:item>
-            <router-link to="Classify">查看全部</router-link>
-            
-            <i class="iconfont icon-more"></i>
-          </template>
-        </goods-class>
-        <banner></banner>
-        <goods-class :GoodList="goodsListData.GoodList2">默认模块2</goods-class>
-        <banner></banner>
-        <goods-class :GoodList="goodsListData.GoodList3">默认模块3</goods-class>
-        <banner></banner>
-        <slide-class :listClass="slideListData"></slide-class>
-        <banner></banner>
-        <video-class :videoList="videoList"></video-class>
-      </div>
-    </div>
+    <main>
+      <flash-bar :GoodList="goodsListData.list"></flash-bar>
+      <banner></banner>
+      <title-bar>模块一</title-bar>
+      <goods-class :GoodList="goodsListData.list"></goods-class>
+      <banner></banner>
+      <title-bar>
+        模块二
+        <template v-slot:inner-con>
+          <a href="#">选项1</a>
+          <a href="#">选项2</a>
+          <a href="#">选项3</a>
+        </template>
+      </title-bar>
+      <goods-class :GoodList="goodsListData.list"></goods-class>
+      <banner></banner>
+      <title-bar>模块三</title-bar>
+      <goods-class :GoodList="goodsListData.list"></goods-class>
+      <banner></banner>
+      <slide-class :listClass="slideListData"></slide-class>
+      <banner></banner>
+      <video-class :videoList="videoList"></video-class>
+      <tool-bar></tool-bar>
+    </main>
   </div>
 </template>
 
@@ -35,6 +37,9 @@ import Banner from "@/components/Banner/Banner";
 import GoodsClass from "@/components/GoodsClass/GoodsClass";
 import SlideClass from "@/components/SlideClass/SlideClass";
 import VideoClass from "@/components/VideoClass/VideoClass";
+import TitleBar from "@/components/TitleBar/TitleBar";
+import ToolBar from "@/components/ToolBar/ToolBar";
+
 // 自定义封装swiper
 import AdSwiper from "@/components/AdSwiper/AdSwiper";
 
@@ -47,32 +52,37 @@ export default {
     Banner,
     GoodsClass,
     SlideClass,
-    VideoClass
+    VideoClass,
+    TitleBar,
+    ToolBar,
   },
   methods: {
-    getCategoryList: function() {
+    init() {},
+
+    getCategoryList: function () {
       return this.$axios.post(
         "http://rap2.taobao.org:38080/app/mock/255953/categoryList"
       );
     },
-    getSlideList: function() {
+    getSlideList: function () {
       return this.$axios.get(
         "http://rap2.taobao.org:38080/app/mock/255953/slideList"
       );
     },
-    getGoodList: function() {
-      return this.$axios.get("./mock/data.json");
+    // 获取商品列表数据
+    getGoodList: function () {
+      return this.$axios.get(`${this.$api}/goods/list`);
     },
-    getSlideListData: function() {
+    getSlideListData: function () {
       return this.$axios.get(
         "http://rap2.taobao.org:38080/app/mock/255953/slideListData"
       );
     },
-    getVideoList: function() {
+    getVideoList: function () {
       return this.$axios.get(
         "http://rap2.taobao.org:38080/app/mock/255953/videoList"
       );
-    }
+    },
   },
   data() {
     return {
@@ -81,7 +91,7 @@ export default {
       slideList: [],
       goodsListData: {},
       slideListData: [],
-      videoList: []
+      videoList: [],
     };
   },
   mounted() {
@@ -92,10 +102,10 @@ export default {
         this.getSlideList(),
         this.getGoodList(),
         this.getSlideListData(),
-        this.getVideoList()
+        this.getVideoList(),
       ])
       .then(
-        this.$axios.spread(function(
+        this.$axios.spread(function (
           categoryList,
           slideList,
           goodsListData,
@@ -104,23 +114,26 @@ export default {
         ) {
           _this.categoryList = categoryList.data.categoryList;
           _this.slideList = slideList.data.slideList;
-          _this.goodsListData = goodsListData.data.result[0];
+          _this.goodsListData = goodsListData.data.result;
+
+          console.log(goodsListData.data.result);
+
           _this.slideListData = slideListData.data.slideListData;
           _this.videoList = videoList.data.videoList;
         })
       );
-  }
+  },
 };
 </script>
 
 <style lang="scss">
 .container {
-  width: 1226px;
-  margin: 0 auto;
-  padding-bottom: 24px;
-}
-.bg-box {
   background: #eee;
   width: 100%;
+  padding-bottom: 20px;
+  main {
+    width: 1226px;
+    margin: 0 auto;
+  }
 }
 </style>

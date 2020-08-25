@@ -1,12 +1,10 @@
 <template>
   <div class="flash-bar">
     <title-bar>
-      FlashBar模块
-      <template v-slot:sub-item>
-        <!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
-        <i class="iconfont icon-back swiper-button-prev2" @click="prevHanddle"></i>
-        <!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
-        <i class="iconfont icon-more swiper-button-next2" @click="nextHanddle"></i>
+      新品模块
+      <template v-slot:inner-con>
+        <i class="iconfont icon-back swiper-button-prev2"></i>
+        <i class="iconfont icon-right swiper-button-next2"></i>
       </template>
     </title-bar>
 
@@ -15,9 +13,10 @@
         <swiper-slide v-for="(list,index) in getFormatArray" :key="index" class="bar-page">
           <goods-card
             :goodsParm="item"
+            :topLineIndex="index"
             v-for="(item,index) in list"
             :key="index"
-            :topLineIndex="index"
+            class="hover-card"
           ></goods-card>
         </swiper-slide>
       </swiper>
@@ -39,10 +38,10 @@ export default {
     Swiper,
     SwiperSlide,
     TitleBar,
-    Tag
+    Tag,
   },
   computed: {
-    getFormatArray: function() {
+    getFormatArray: function () {
       // this is dev
       // function deepClone(item) {
       //   const target = item.constructor === Array ? [] : {};
@@ -71,57 +70,65 @@ export default {
         tmpArr.push(copyDate.splice(0, 5));
       }
       return tmpArr;
-    }
-  },
-  methods: {
-    nextHanddle() {
-      console.log("click nextHanddle");
     },
-    prevHanddle() {
-      console.log("click prevHanddle");
-    }
   },
+  methods: {},
   props: {
     GoodList: {
       type: Array,
-      default: function() {
+      default: function () {
         return [];
-      }
-    }
+      },
+    },
   },
   data() {
     return {
       swiperOptions: {
         navigation: {
           nextEl: ".swiper-button-next2",
-          prevEl: ".swiper-button-prev2"
+          prevEl: ".swiper-button-prev2",
         },
-        autoplay: true,
-        loop: false
-      }
+        autoplay: false,
+        loop: false,
+      },
       // flashList: this.GoodList
     };
-  }
+  },
 };
 </script>
 <style lang='scss' scoped>
-@import "./FlashBar.scss";
+@import "../../assets/css/index";
+
 .swiper-container2 {
   position: relative;
   .bar-page {
     width: 1226px;
-    float: left;
     display: flex;
     justify-content: space-between;
+    .hover-card{
+      &:hover {
+        box-shadow: 0 -3px 12px 3px rgba(0, 0, 0, 0.1);
+        transform: none
+      }
+    }
   }
+}
 
-  // .swiper-button-prev2,
-  // .swiper-button-next2 {
-  //   padding: 18px 10px;
-  //   &:hover {
-  //     color: #fff;
-  //     background: rgba(0, 0, 0, 0.6);
-  //   }
-  // }
+.iconfont {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  padding: 2px 12px;
+  margin: 0 2px;
+  color: #e0e0e0;
+  background: #fff;
+}
+
+.icon-back,
+.icon-right {
+  &:hover {
+    color: #fff;
+    background: $base-color;
+  }
 }
 </style>

@@ -5,77 +5,77 @@
     <div class="topbar-wrapper">
       <div id="site-topbar">
         <div class="lside">
-          <a href="#" v-for="(item, index) in siteList" :key="index">{{item}}</a>
+          <a v-for="(item, index) in siteList" :key="index">{{item}}</a>
         </div>
         <!--购物车部分-->
         <div class="rside">
-          <a @click="showLoginPanel">登录</a>
-          <!-- 声明式路由 -->
-          <router-link to="./Regist">注册</router-link>
-          <!-- <a href="./Regist">注册</a> -->
-          <a href="#">消息通知</a>
-          <div class="shopping_car">
-            <div class="title">
-              <i class="iconfont icon-gouwuchekong"></i>
-              <a>购物车（0）</a>
+          <span v-if="!userName">
+            <a @click="isShow(true)">登录</a>
+            <router-link to="./Regist">注册</router-link>
+          </span>
+
+          <span v-else class="user">
+            <a href="#" class="user-name">
+              <span class="name">{{userName}}</span>
+              <i class="iconfont icon-unfold"></i>
+            </a>
+            <div class="user-menu-wrapper">
+              <ul class="user-menu">
+                <li>
+                  <router-link :to="{ name: 'userCenter'}">个人中心</router-link>
+                </li>
+                <li>
+                  <router-link :to="{ name: 'commentPage'}">评价晒单</router-link>
+                </li>
+                <li>
+                  <router-link :to="{ name: 'favoritePage'}">我的收藏</router-link>
+                </li>
+                <li>
+                  <router-link :to="{ name: 'userInfoPage'}">账户信息</router-link>
+                </li>
+                <li>
+                  <a @click="handleLogout">退出登录</a>
+                </li>
+              </ul>
             </div>
+          </span>
+
+          <router-link :to="{ path: 'userCenter/messagePage'}">消息通知</router-link>
+          <router-link :to="{ path: 'userCenter/orderPage'}">我的订单</router-link>
+          <div
+            class="shopping_car"
+            @click="toCart"
+            @mouseenter="setCartListStatu(true)"
+            @mouseleave="setCartListStatu(false)"
+          >
+            <span>
+              <i class="iconfont icon-cart"></i>
+              <a>购物车（{{cartList.count || 0}}）</a>
+            </span>
+
             <!--购物车下拉隐藏菜单-->
-            <div class="menu">
-              <p>购物车中还没有商品，赶紧选购吧！</p>
+            <div class="menu" :style="menuStyle">
+              <ul class="cart-list" v-if="cartList.count">
+                <li class="cart-item" v-for="(item,index) in newCartList" :key="index">
+                  <a class="thumb">
+                    <img :src="item.productImgUrl" alt />
+                  </a>
+                  <a class="name">{{item.productName}}</a>
+                  <a class="price">{{item.productPrice}} × {{item.productNum}}</a>
+                </li>
+              </ul>
+              <ul class="cart-list" v-else>
+                <li class="cart-item" style="padding: 20px ">购物车中还没有商品，赶紧选购吧！</li>
+              </ul>
             </div>
             <!--购物车下拉菜单结束-->
           </div>
         </div>
       </div>
     </div>
-    <!--头部商品导航-->
-    <div class="header-wrapper">
-      <div id="site-header">
-        <!--左侧logo区-->
-        <div class="logo">
-          <router-link to="/">
-            <img src="https://dummyimage.com/56x56/f27998" />
-          </router-link>
-        </div>
-        <!-- 商品标题 -->
-        <ul id="header-nav">
-          <li
-            @mouseenter="showMenu"
-            @mouseleave="hideMenu"
-            v-for="(items,index) in goodsList"
-            :key="index"
-            :data-index="index"
-          >
-            <a href class="title">{{items.title}}</a>
-            <transition name="slide-fade">
-              <div class="menu-wrapper" v-show="isShow === index">
-                <div class="menu-list">
-                  <div href class="menu-item" v-for="(item,index) in items.menuList" :key="index">
-                    <tag :tag="item.tag" v-if="item.tag"></tag>
-                    <img :src="item.imgUrl" />
-                    <a>{{item.title}}</a>
-                    <p class="price">{{item.price}}</p>
-                  </div>
-                </div>
-              </div>
-            </transition>
-          </li>
-        </ul>
-        <!--右边查询区-->
-        <div class="search" id="search">
-          <input type="text" class="text" />
-          <i class="icon iconfont icon-fangdajing"></i>
-
-          <p class="tags">
-            <a href>查询记录 1</a>
-            <a href>查询记录 2</a>
-          </p>
-        </div>
-      </div>
-    </div>
 
     <!-- 登录面板 -->
-    <login-box :isShow="isShade" @getState="getState"></login-box>
+    <login-box :show.sync="show"></login-box>
   </div>
 </template>
 
@@ -86,56 +86,114 @@ import LoginBox from "@/components/LoginBox/LoginBox";
 export default {
   name: "Header",
   props: {
-    goodsList: {
-      type: Array,
-      default: function() {
-        return [];
-      }
-    },
     siteList: {
       type: Array,
-      default: function() {
+      default: function () {
         return [];
-      }
-    }
+      },
+    },
   },
+  // provide() {
+  //   return {
+  //     isShow: this.isShow
+  //   };
+  // },
   data() {
     return {
-      isShow: NaN,
-      isShade: false
+      menuStyle: {
+        height: "0px",
+      },
+      show: false,
     };
   },
   components: {
     Tag,
-    LoginBox
+    LoginBox,
+  },
+  mounted() {
+    this.init();
+  },
+  computed: {
+    cartList() {
+      let cartList = this.$store.state.userInfo.cartList;
+      return cartList ? cartList : [];
+    },
+    // 将cartList对象转为数组，并去除count属性的元素
+    newCartList() {
+      let arr = [],
+        cartList = this.cartList;
+      for (const key in cartList) {
+        if (cartList.hasOwnProperty(key)) {
+          if (key != "count") {
+            arr.push(cartList[key]);
+          }
+        }
+      }
+      return arr;
+    },
+    userName: {
+      get: function () {
+        console.log("this.$store.state.userInfo", this.$store.state.userInfo);
+        return this.$store.state.userInfo.userName;
+      },
+      set: function (newValue) {
+        this.$store.state.userInfo.userName = newValue;
+      },
+    },
   },
   methods: {
-    showMenu(e) {
-      this.isShow = parseInt(e.target.dataset.index);
+    init() {
+      this.checkLogin(); // 检测用户是否登陆
+      this.getUserInfo(); // 获取用户信息
     },
-    hideMenu() {
-      this.isShow = NaN;
+    setCartListStatu(e) {
+      if (e) {
+        let count = this.newCartList.length;
+        this.menuStyle.height = count == 0 ? "70px" : count * 90 + "px";
+      } else {
+        this.menuStyle.height = 0;
+      }
     },
-    showLoginPanel() {
-      this.isShade = true;
+    // 设置登录面板显示状态
+    isShow(e) {
+      this.show = e;
     },
-    getState(e) {
-      this.isShade = e;
-    }
-  }
+    // 退出登录
+    handleLogout() {
+      this.$axios.post(`${this.$api}/users/logout`).then((response) => {
+        let res = response.data;
+        if (res.status === "0") {
+          this.$store.dispatch("setLoginInfo", false); //设置登录状态为false
+          this.$store.commit("setUserInfo", res.result); // 接收后台返回的空对象，清空用户数据
+        }
+      });
+    },
+    // 检测登录
+    checkLogin() {
+      this.$axios.get(`${this.$api}/users/checkLogin`).then((res) => {
+        if (res.data.status == "0") {
+          // 异步时使用action的dispatch
+          this.$store.dispatch("setLoginInfo", true);
+        }
+      });
+    },
+    // 获取用户信息
+    getUserInfo() {
+      this.$axios.post(`${this.$api}/users/userInfo`).then((res) => {
+        if (res.data.status == "0") {
+          console.log("当前用户信息", res.data.result);
+          this.$store.commit("setUserInfo", res.data.result);
+        }
+      });
+    },
+    // 用户未登录时阻止跳转购物车
+    toCart() {
+      if (this.userName) {
+        this.$router.push({ path: "Cart" });
+      } else {
+        alert("用户未登录");
+      }
+    },
+  },
 };
 </script>
-
-<style scoped>
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.5s ease;
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active for below version 2.1.8 */ {
-  transform: translateY(-20px);
-  opacity: 0;
-}
-</style>

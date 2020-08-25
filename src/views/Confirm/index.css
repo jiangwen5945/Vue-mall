@@ -1,0 +1,194 @@
+.page-main {
+  padding: 40px 0 60px;
+  background: #f5f5f5;
+}
+
+.confirm-context {
+  width: 1226px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.confirm-context .confirm-order .section {
+  padding: 30px 48px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  color: #424242;
+}
+
+.confirm-context .confirm-order .section-order {
+  padding-left: 183px;
+  position: relative;
+}
+
+.confirm-context .confirm-order .section-order .order-info {
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.confirm-context .confirm-order .section-order .order-info .title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.confirm-context .confirm-order .section-order .order-info .order-time {
+  color: #616161;
+  margin-bottom: 5px;
+  line-height: 2;
+}
+
+.confirm-context .confirm-order .section-order .order-info .order-time .pay-time-tip {
+  margin: 0 5px;
+  color: #ff6700;
+}
+
+.confirm-context .confirm-order .section-order .order-info .fr {
+  float: right;
+  text-align: right;
+}
+
+.confirm-context .confirm-order .section-order .order-info .fl {
+  float: left;
+}
+
+.confirm-context .confirm-order .section-order .order-info .fl i {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 60px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.confirm-context .confirm-order .section-order .order-info .fl .icon-check {
+  color: #83c44e;
+  border: 2px solid #83c44e;
+}
+
+.confirm-context .confirm-order .section-order .order-info .fl .icon-close {
+  color: #f55757;
+  border: 2px solid #f55757;
+}
+
+.confirm-context .confirm-order .section-order .order-info .fl .icon-evaluate {
+  color: #ff6700;
+  border: 2px solid #ff6700;
+  font-size: 48px;
+}
+
+.confirm-context .confirm-order .section-order .order-info .post-info {
+  color: #616161;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+}
+
+.confirm-context .confirm-order .section-order .order-info .total {
+  margin-bottom: 10px;
+  color: #757575;
+}
+
+.confirm-context .confirm-order .section-order .order-info .money {
+  color: #ff6700;
+  font-size: 14px;
+}
+
+.confirm-context .confirm-order .section-order .order-info .money em {
+  font-style: normal;
+  font-size: 24px;
+}
+
+.confirm-context .confirm-order .section-order .order-info .show-detail {
+  color: #757575;
+  text-decoration: none;
+}
+
+.confirm-context .confirm-order .section-order .order-info .show-detail:hover {
+  color: #ff6700;
+}
+
+.confirm-context .confirm-order .section-order .order-info .show-detail .iconfont {
+  font-size: 12px;
+}
+
+.confirm-context .confirm-order .section-order .order-detail {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.confirm-context .confirm-order .section-order .order-detail .label {
+  float: left;
+  width: 85px;
+}
+
+.confirm-context .confirm-order .section-order .order-detail .content {
+  float: left;
+}
+
+.confirm-context .confirm-order .section-order .order-detail .order-num {
+  color: #ff6700;
+  display: block;
+}
+
+.confirm-context .confirm-order .section-order .order-detail ul {
+  padding: 20px 0 0 0;
+  margin-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.confirm-context .confirm-order .section-order .order-detail ul li {
+  line-height: 24px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.confirm-context .confirm-pay .section {
+  padding: 30px 48px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  color: #424242;
+}
+
+.confirm-context .confirm-pay .cash-title {
+  height: 50px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 18px;
+}
+
+.confirm-context .confirm-pay .payment-box {
+  margin-bottom: 30px;
+}
+
+.confirm-context .confirm-pay .payment-box .payment-header {
+  margin-bottom: 15px;
+}
+
+.confirm-context .confirm-pay .payment-box .payment-body .payment-list li {
+  float: left;
+  width: 174px;
+  height: 60px;
+  line-height: 60px;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.confirm-context .confirm-pay .payment-box .payment-body .payment-list li img {
+  cursor: pointer;
+  margin-left: 0;
+  opacity: 1;
+}
+/*# sourceMappingURL=index.css.map */

@@ -12,17 +12,10 @@
             height: 80px;
             position: relative;
             float: left;
-            a {
-                display: block;
-                width: 243px;
-                height: 80px;
-                float: left;
-                line-height: 80px;
-                text-align: center;
-                color: #616161;
-                font-size: 16px;
+            color: #616161;
+            &:hover {
+                color: $base-color;
             }
-
             &:not(:last-child)::after {
                 content: "";
                 display: block;
@@ -33,20 +26,22 @@
                 top: 28px;
                 left: 243px;
             }
+            a {
+                width: 243px;
+                height: 80px;
+                float: left;
+                line-height: 80px;
+                text-align: center;
+                font-size: 16px;
+            }
 
-            &:hover a {
-                color: $base-color;
-            }
-            &:hover i {
-                color: $base-color;
-            }
             i {
                 display: block;
                 position: absolute;
                 top: 27px;
                 left: 37px;
                 font-size: 24px;
-                color: #868686;
+                line-height: 24px;
             }
         }
     }
@@ -105,25 +100,20 @@
                 text-align: center;
                 width: 240px;
             }
-            a {
-                i {
-                    color: $base-color;
-                    font-size: 12px;
-                    display: block;
-                    position: absolute;
-                    top: 80px;
-                    left: 63px;
-                    width: 120px;
-                    height: 29px;
-                    margin: auto;
-                    text-align: center;
-                    line-height: 29px;
-                    border: 1px solid $base-color;
-                    span {
-                        margin-left: 3px;
-                    }
-                }
-                &:hover i {
+            i {
+                color: $base-color;
+                font-size: 12px;
+                display: block;
+                position: absolute;
+                top: 80px;
+                left: 63px;
+                width: 120px;
+                height: 29px;
+                margin: auto;
+                text-align: center;
+                line-height: 29px;
+                border: 1px solid $base-color;
+                &:hover {
                     color: #fff;
                     background: $base-color;
                 }

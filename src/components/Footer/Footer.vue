@@ -2,25 +2,25 @@
   <div class="footer-container">
     <ul class="footer-service">
       <li>
-        <i class="iconfont icon icon-phone"></i>
-        <a href>预约维修服务</a>
+        <i class="iconfont icon-repair"></i>
+        <a>预约维修服务</a>
       </li>
 
       <li>
-        <i class="iconfont icon icon-clock"></i>
-        <a href>7天无理由退货</a>
+        <i class="iconfont icon-refund"></i>
+        <a>7天无理由退货</a>
       </li>
       <li>
-        <i class="iconfont icon icon-assessedbadge"></i>
-        <a href>15天免费换货</a>
+        <i class="iconfont icon-round_transfer"></i>
+        <a>15天免费换货</a>
       </li>
       <li>
-        <i class="iconfont icon icon-gifts"></i>
-        <a href>满150元包邮</a>
+        <i class="iconfont icon-present"></i>
+        <a>满150元包邮</a>
       </li>
       <li>
-        <i class="iconfont icon icon-map"></i>
-        <a href>520余家售后网点</a>
+        <i class="iconfont icon-location"></i>
+        <a>520余家售后网点</a>
       </li>
     </ul>
 
@@ -48,18 +48,12 @@
           周一至周日 8:00-18:00
           <br />（仅收市话费）
         </p>
-        <a>
-          <i class="iconfont icon-comments">
-            <span>24小时在线客服</span>
-          </i>
-        </a>
+        <i class="iconfont icon-comment_fill_light">在线客服</i>
       </div>
     </div>
     <div class="footer-info">
       <div class="lside">
-          <a  v-for="(item,index) in 12" :key="index">
-            xxxxxx
-          </a>
+        <a v-for="(item,index) in 12" :key="index">xxxxxx</a>
       </div>
       <ul>
         <li v-for="(item,index) in imgUrl" :key="index">
@@ -76,14 +70,14 @@ export default {
   props: {},
   data() {
     return {
-      imgUrl:[
-        require('../../assets/imgs/bottom1.png'),
-        require('../../assets/imgs/bottom2.png'),
-        require('../../assets/imgs/bottom3.png'),
-        require('../../assets/imgs/bottom4.png'),
-      ]
+      imgUrl: [
+        require("../../assets/imgs/bottom1.png"),
+        require("../../assets/imgs/bottom2.png"),
+        require("../../assets/imgs/bottom3.png"),
+        require("../../assets/imgs/bottom4.png"),
+      ],
     };
-  }
+  },
 };
 </script>
 <style lang='scss' scoped>

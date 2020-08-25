@@ -1,6 +1,8 @@
 <template>
   <div class="slide-class">
-    <title-bar>推荐模块</title-bar>
+    <title-bar>
+        推荐模块
+    </title-bar>
     <div class="card-container">
       <slide-card :cardlist="cardlist" v-for="(cardlist,index) in listClass" :key="index"></slide-card>
     </div>

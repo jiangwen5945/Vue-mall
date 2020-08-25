@@ -1,0 +1,92 @@
+[
+    {
+        "productId": 30001,
+        "title": "默认标题1",
+        "price": 99,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    },
+    {
+        "productId": 30002,
+        "title": "默认标题2",
+        "price": 58,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    },
+    {
+        "productId": 30003,
+        "title": "默认标题3",
+        "price": 688,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    },
+    {
+        "productId": 30004,
+        "title": "默认标题4",
+        "price": 329,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    },
+    {
+        "productId": 30005,
+        "title": "默认标题5",
+        "price": 124,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    },
+    {
+        "productId": 30006,
+        "title": "默认标题6",
+        "price": 55,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    },
+    {
+        "productId": 30007,
+        "title": "默认标题7",
+        "price": 24,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    },
+    {
+        "productId": 30008,
+        "title": "默认标题8",
+        "price": 12,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    },
+    {
+        "productId": 30009,
+        "title": "默认标题9",
+        "price": 31,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    },
+    {
+        "productId": 30010,
+        "title": "默认标题10",
+        "price": 21,
+        "explain": "默认描述",
+        "goodsImgUrl": "http://dummyimage.com/160x160",
+        "goodsUrl": "#",
+        "cardType": 2
+    }
+]

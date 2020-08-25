@@ -1,9 +1,10 @@
 .clearfix:after {
   display: block;
-  content: '.';
+  content: ".";
   height: 0;
   line-height: 0;
   clear: both;
+  visibility: hidden;
 }
 
 .overflow {
@@ -11,6 +12,51 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.btn {
+  display: inline-block;
+  width: 158px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #b0b0b0;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  color: #b0b0b0;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.btn-primary {
+  background: #ff6700;
+  border-color: #ff6700;
+  color: #fff;
+}
+
+.btn-normal {
+  background: #fff;
+  border-color: #ff6700;
+  color: #ff6700;
+}
+
+.btn-contract {
+  margin-right: 5px;
+}
+
+.btn-line-gray {
+  border-color: #b0b0b0;
+  background: #fff;
+  color: #b0b0b0;
+}
+
+.btn-small {
+  width: 118px;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
 }
 
 .video-box {
@@ -97,22 +143,19 @@
   line-height: 32px;
 }
 
-.player .player-top a {
+.player .player-top .close {
   position: absolute;
   top: 18px;
   right: 18px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 28px;
-  background: #e0e0e0;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 18px;
 }
 
-.player .player-top a:hover {
-  background: #ff6700;
+.player .player-top .close i {
+  font-size: 28px;
+  line-height: 28px;
+  color: #afafaf;
+}
+
+.player .player-top .close i:hover {
+  color: #ff6700;
 }
 /*# sourceMappingURL=VideoCard.css.map */

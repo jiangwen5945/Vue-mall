@@ -22,7 +22,7 @@
       <i class="iconfont icon-back"></i>
     </span>
     <span class="btn right" @click="nextHandle">
-      <i class="iconfont icon-more"></i>
+      <i class="iconfont icon-right"></i>
     </span>
   </div>
 </template>

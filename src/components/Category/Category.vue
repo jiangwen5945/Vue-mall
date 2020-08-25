@@ -34,7 +34,7 @@
       <ul class="category-bottom">
         <li class="icon-wrapper">
           <a class="icon-item" v-for="(item,index) in 6" :key="index">
-            <i class="iconfont icon-qia"></i>
+            <i class="iconfont icon-tag"></i>
             <span>图标名称</span>
           </a>
         </li>

@@ -1,0 +1,83 @@
+[
+  {
+      "productId": 10001,
+      "title": "默认标题1",
+      "price": 12,
+      "explain": "默认描述",
+      "goodsImgUrl": "http://dummyimage.com/160x160",
+      "goodsUrl": "001",
+      "cardType": 1
+  },
+  {
+      "productId": 10002,
+      "title": "默认标题1",
+      "price": 31,
+      "explain": "默认描述",
+      "goodsImgUrl": "http://dummyimage.com/160x160",
+      "goodsUrl": "002",
+      "cardType": 2
+  },
+  {
+      "productId": 10003,
+      "title": "默认标题1",
+      "price": 22,
+      "explain": "默认描述",
+      "goodsImgUrl": "http://dummyimage.com/160x160",
+      "goodsUrl": "003",
+      "cardType": 2
+  },
+  {
+      "productId": 10004,
+      "title": "默认标题1",
+      "price": 35,
+      "explain": "默认描述",
+      "goodsImgUrl": "http://dummyimage.com/160x160",
+      "goodsUrl": "003",
+      "cardType": 2
+  },
+  {
+      "productId": 10005,
+      "title": "默认标题1",
+      "price": 18,
+      "explain": "默认描述",
+      "goodsImgUrl": "http://dummyimage.com/160x160",
+      "goodsUrl": "#",
+      "cardType": 2
+  },
+  {
+      "productId": 10006,
+      "title": "默认标题1",
+      "price": 98,
+      "explain": "默认描述",
+      "goodsImgUrl": "http://dummyimage.com/160x160",
+      "goodsUrl": "#",
+      "cardType": 2
+  },
+  {
+      "productId": 10007,
+      "title": "默认标题1",
+      "price": 88,
+      "explain": "默认描述",
+      "goodsImgUrl": "http://dummyimage.com/160x160",
+      "goodsUrl": "#",
+      "cardType": 2
+  },
+  {
+      "productId": 10008,
+      "title": "默认标题1",
+      "price": 128,
+      "explain": "默认描述",
+      "goodsImgUrl": "http://dummyimage.com/160x160",
+      "goodsUrl": "#",
+      "cardType": 2
+  },
+  {
+      "productId": 10009,
+      "title": "默认标题1",
+      "price": 89,
+      "explain": "默认描述",
+      "goodsImgUrl": "http://dummyimage.com/160x160",
+      "goodsUrl": "#",
+      "cardType": 3
+  }
+]

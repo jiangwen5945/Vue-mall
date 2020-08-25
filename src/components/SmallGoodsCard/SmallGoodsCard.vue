@@ -2,16 +2,16 @@
   <div class="small-googs-card">
     <div class="small-box">
       <a href="#">
-        <img src="https://dummyimage.com/80x80" />
-        <h3 href="#" class="name">xxxx</h3>
-        <a href="#" class="price">xx元</a>
+        <img :src="goodsParm.productImgUrl" />
+        <h3 href="#" class="name">{{goodsParm.productName}}</h3>
+        <a href="#" class="price">{{goodsParm.productPrice}}元</a>
       </a>
     </div>
     <div class="small-box">
       <a href="#">
-        <img src="https://dummyimage.com/80x80" />
-        <h3 href class="name">xxxx</h3>
-        <a href class="price">xx元</a>
+        <img :src="goodsParm.productImgUrl" />
+        <h3 href="#" class="name">{{goodsParm.productName}}</h3>
+        <a href="#" class="price">{{goodsParm.productPrice}}元</a>
       </a>
     </div>
   </div>
@@ -26,16 +26,7 @@ export default {
       default: () => {
         return {};
       }
-    },
-    topLineIndex: {
-      type: Number,
-      default: NaN
     }
-  },
-  data() {
-    return {
-      hasTopLine: true
-    };
   }
 };
 </script>

@@ -1,0 +1,173 @@
+.page-main {
+    padding: 40px 0 60px;
+    background: #f5f5f5;
+}
+
+.confirm-context {
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+    .confirm-order {
+        .section {
+            padding: 30px 48px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            color: #424242;
+        }
+        .section-order {
+            padding-left: 183px;
+            position: relative;
+            .order-info {
+                padding: 20px 0;
+                overflow: hidden;
+                .title {
+                    margin-bottom: 10px;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 36px;
+                }
+                .order-time {
+                    color: #616161;
+                    margin-bottom: 5px;
+                    line-height: 2;
+                    .pay-time-tip {
+                        margin: 0 5px;
+                        color: #ff6700;
+                    }
+                }
+                .fr {
+                    float: right;
+                    text-align: right;
+                }
+                .fl {
+                    float: left;
+                    i {
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        position: absolute;
+                        top: 50px;
+                        left: 50px;
+                        font-size: 60px;
+                        text-align: center;
+                        border-radius: 50%;
+                    }
+                    .icon-check {
+                        color: #83c44e;
+                        border: 2px solid #83c44e;
+                    }
+                    .icon-close {
+                        color: #f55757;
+                        border: 2px solid #f55757;
+                    }
+                    .icon-evaluate{
+                        color: #ff6700;
+                        border: 2px solid #ff6700;
+                        font-size: 48px;
+                    }
+                }
+                .post-info {
+                    color: #616161;
+                    transition: height 0.3s ease;
+                }
+                .total {
+                    margin-bottom: 10px;
+                    color: #757575;
+                }
+                .money {
+                    color: #ff6700;
+                    font-size: 14px;
+                    em {
+                        font-style: normal;
+                        font-size: 24px;
+                    }
+                }
+                .show-detail {
+                    color: #757575;
+                    text-decoration: none;
+                    &:hover {
+                        color: #ff6700;
+                    }
+                    .iconfont {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .order-detail {
+                height: 0;
+                overflow: hidden;
+                transition: all 0.5s;
+
+                .label {
+                    float: left;
+                    width: 85px;
+                }
+                .content {
+                    float: left;
+                }
+                .order-num {
+                    color: #ff6700;
+                    display: block;
+                }
+                ul {
+                    padding: 20px 0 0 0;
+                    margin-top: 10px;
+                    border-top: 1px solid #e0e0e0;
+                    overflow: hidden;
+
+                    li {
+                        line-height: 24px;
+                        margin-bottom: 8px;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+
+    .confirm-pay {
+        .section {
+            padding: 30px 48px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            color: #424242;
+        }
+
+        .cash-title {
+            height: 50px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 18px;
+        }
+
+        .payment-box {
+            margin-bottom: 30px;
+            .payment-header {
+                margin-bottom: 15px;
+            }
+            .payment-body {
+                .payment-list {
+                    li {
+                        float: left;
+                        width: 174px;
+                        height: 60px;
+                        line-height: 60px;
+                        margin-left: 14px;
+                        margin-bottom: 14px;
+                        border: 1px solid #e0e0e0;
+                        text-align: center;
+                        cursor: pointer;
+                        overflow: hidden;
+                        transition: all 0.4s;
+                        img {
+                            cursor: pointer;
+                            margin-left: 0;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

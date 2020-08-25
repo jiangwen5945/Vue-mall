@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <top-ad :imgUrl="imgUrl" v-if="hasTopAd"></top-ad>
-    <v-header :goodsList="headerData.goodsList" :siteList="headerData.siteList" v-if="hasCommon"></v-header>
+    <v-header  :siteList="siteList" v-if="hasCommon"></v-header>
+    <search-bar :goodsList="headerData.goodsList" v-if="hasCommon"></search-bar>
     <router-view></router-view>
     <v-footer v-if="hasCommon"></v-footer>
   </div>
@@ -9,8 +9,8 @@
 
 
 <script>
-import TopAd from "@/components/TopAd/TopAd";
 import vHeader from "@/components/Header/Header";
+import SearchBar from "@/components/SearchBar/SearchBar";
 import vFooter from "@/components/Footer/Footer";
 export default {
   methods: {
@@ -22,7 +22,20 @@ export default {
   },
   data() {
     return {
-      imgUrl: "https://dummyimage.com/2560x120/02adea",
+      siteList:[
+        '橙狐',
+        '站点1',
+        '站点2',
+        '站点3',
+        '站点4',
+        '站点5',
+        '站点6',
+        '站点7',
+        '社区',
+        '服务',
+        '帮助中心',
+        'Select Location' // 国际化
+      ],
       headerData: {},
       // 有公共部分的页面
       pathArr: ["/", "/GoodsDetails", "/Classify"]
@@ -34,12 +47,6 @@ export default {
         if (this.$route.path === path) {
           return true;
         }
-      }
-      return false;
-    },
-    hasTopAd() {
-      if (this.$route.path === "/") {
-        return true;
       }
       return false;
     }
@@ -54,8 +61,13 @@ export default {
   },
   components: {
     vHeader,
-    TopAd,
+    SearchBar,
     vFooter
   }
 };
 </script>
+
+<style lang="scss" >
+// icon在线字体
+@import url('http://at.alicdn.com/t/font_1981066_i18zdqmazfn.css');;
+</style>

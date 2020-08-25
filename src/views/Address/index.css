@@ -1,0 +1,547 @@
+.page-main {
+  padding: 40px 0 60px;
+  background: #f5f5f5;
+}
+
+.page-main .address-wrapper {
+  width: 1226px;
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+}
+
+.page-main .address-wrapper #fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.page-main .address-wrapper #fixed-header .fixed-address-choose {
+  position: relative;
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.page-main .address-wrapper #fixed-header .fixed-address-choose .choose-btn {
+  float: right;
+  background: #ff6700;
+  border-color: #ff6700;
+  color: #fff;
+  width: 158px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.page-main .address-wrapper #fixed-header .fixed-address-choose .address-title {
+  margin: 15px 0 0;
+  line-height: 40px;
+  color: #757575;
+}
+
+.page-main .address-wrapper #fixed-header .fixed-address-choose .address-title .address-desc {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.page-main .address-wrapper #fixed-header .fixed-address-choose .address-title .address-desc {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.page-main .address-wrapper .detail-section {
+  position: relative;
+  padding: 24px 24px 0 24px;
+}
+
+.page-main .address-wrapper .detail-section .detail-header {
+  color: #333;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.page-main .address-wrapper .detail-section .address-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item {
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 268px;
+  height: 178px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  position: relative;
+  margin: 10px 10px;
+  vertical-align: top;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .address-info {
+  line-height: 22px;
+  color: #757575;
+  padding: 15px 24px 0;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .address-info:hover .address-action {
+  opacity: 1;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .address-info .name {
+  font-size: 18px;
+  color: #333;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .address-info .default {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  color: #ff6700;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .address-info .default i {
+  font-size: 20px;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .address-info .tel {
+  line-height: 22px;
+  color: #757575;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .address-info .address-con span {
+  display: inline-block;
+  margin-right: 3px;
+  word-wrap: break-word;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .address-info .address-action {
+  text-align: right;
+  position: absolute;
+  right: 24px;
+  bottom: 10px;
+  color: #ff6700;
+  opacity: 0;
+  font-size: 12px;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .add-desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  color: #b0b0b0;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .add-desc i {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+}
+
+.page-main .address-wrapper .detail-section .address-list .address-item .add-desc i:hover {
+  color: #888686;
+}
+
+.page-main .address-wrapper .detail-section .address-list .active {
+  border-color: #ff6700;
+}
+
+.page-main .address-wrapper .detail-section .goods-list {
+  padding: 5px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-main .address-wrapper .detail-section .goods-list .good-item {
+  position: relative;
+  padding: 10px 0;
+}
+
+.page-main .address-wrapper .detail-section .goods-list .good-item .item-desc {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 30px;
+  color: #424242;
+}
+
+.page-main .address-wrapper .detail-section .goods-list .good-item .good-img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+}
+
+.page-main .address-wrapper .detail-section .goods-list .good-item .good-img img {
+  width: 30px;
+  height: 30px;
+}
+
+.page-main .address-wrapper .detail-section .goods-list .good-item .good-name {
+  width: 650px;
+}
+
+.page-main .address-wrapper .detail-section .goods-list .good-item .good-name a {
+  color: #424242;
+}
+
+.page-main .address-wrapper .detail-section .goods-list .good-item .good-price {
+  width: 150px;
+  text-align: center;
+}
+
+.page-main .address-wrapper .detail-section .goods-list .good-item .good-status {
+  width: 100px;
+  text-align: center;
+}
+
+.page-main .address-wrapper .detail-section .goods-list .good-item .good-total {
+  width: 190px;
+  text-align: center;
+  color: #ff6701;
+}
+
+.page-main .address-wrapper .detail-section .section-options {
+  padding: 25px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-main .address-wrapper .detail-section .section-options .options-header {
+  width: 150px;
+}
+
+.page-main .address-wrapper .detail-section .section-options .options-header .title {
+  color: #333;
+  font-size: 18px;
+  line-height: 38px;
+}
+
+.page-main .address-wrapper .detail-section .section-options .options-desc {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.page-main .address-wrapper .detail-section .section-options .options-desc .options-list {
+  width: 960px;
+}
+
+.page-main .address-wrapper .detail-section .section-options .options-desc .options-list .selected {
+  border-color: #fff;
+  color: #ff6700;
+  cursor: pointer;
+}
+
+.page-main .address-wrapper .detail-section .section-options .options-desc .options-item {
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  margin-right: 14px;
+  border: 1px solid #fff;
+  color: #333;
+}
+
+.page-main .address-wrapper .count-detail {
+  position: relative;
+  min-height: 160px;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.page-main .address-wrapper .count-detail .coupon-box {
+  position: relative;
+  color: #757575;
+  cursor: pointer;
+}
+
+.page-main .address-wrapper .count-detail .coupon-box i {
+  font-size: 26px;
+  color: #757575;
+  line-height: 50px;
+  vertical-align: sub;
+}
+
+.page-main .address-wrapper .count-detail .coupon-box i:hover {
+  color: #ff6700;
+}
+
+.page-main .address-wrapper .count-detail .section-bill {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}
+
+.page-main .address-wrapper .count-detail .section-bill .bill-item {
+  position: relative;
+  padding-left: 126px;
+  line-height: 2;
+  text-align: right;
+}
+
+.page-main .address-wrapper .count-detail .section-bill .bill-item .bill-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 126px;
+  white-space: nowrap;
+  color: #757575;
+}
+
+.page-main .address-wrapper .count-detail .section-bill .bill-item .bill-money {
+  color: #ff6700;
+}
+
+.page-main .address-wrapper .footer-detail {
+  position: relative;
+  padding: 30px 30px 70px 30px;
+  border-top: 2px solid #f5f5f5;
+}
+
+.page-main .address-wrapper .footer-detail .btn-group {
+  float: right;
+}
+
+.page-main .address-wrapper .footer-detail .btn-group .btn {
+  display: inline-block;
+  width: 158px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #b0b0b0;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  color: #b0b0b0;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  margin-left: 30px;
+  vertical-align: top;
+}
+
+.page-main .address-wrapper .footer-detail .btn-group .btn-primary {
+  background: #ff6700;
+  border-color: #ff6700;
+  color: #fff;
+}
+
+.address-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.address-modal .mi-dialog {
+  position: relative;
+}
+
+.address-modal .mi-dialog .header {
+  position: relative;
+  height: 32px;
+  padding: 14px 20px;
+  line-height: 32px;
+  background-color: #f5f5f5;
+}
+
+.address-modal .mi-dialog .header .title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #424242;
+  vertical-align: middle;
+}
+
+.address-modal .mi-dialog .closeBtn {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #757575;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 10;
+  border-radius: 15px;
+}
+
+.address-modal .mi-dialog .body {
+  padding: 20px;
+}
+
+.address-modal .mi-dialog .body .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.address-modal .mi-dialog .body .item .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.address-modal .mi-dialog .body .item .mi-input {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: left;
+}
+
+.address-modal .mi-dialog .body .item .mi-input textarea.input-text {
+  height: 5em;
+  resize: vertical;
+  font-size: 12px;
+}
+
+.address-modal .mi-dialog .body .item .mi-input .msg-error {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.address-modal .mi-dialog .body .item .mi-input .msg {
+  position: absolute;
+  left: 10px;
+  top: -26px;
+  z-index: 5;
+  padding: 6px 12px;
+  margin: 0;
+  font-size: 12px;
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+  -webkit-transform: translate3d(0, 5px, 0);
+          transform: translate3d(0, 5px, 0);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.address-modal .mi-dialog .body .item .mi-input .msg:after {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  width: 0;
+  height: 0;
+  content: "";
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #e53935 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.address-modal .mi-dialog .body .item .mi-input .input-label {
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  z-index: 2;
+  padding: 0 3px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #b0b0b0;
+  background: rgba(0, 0, 0, 0);
+  cursor: text;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.address-modal .mi-dialog .body .item .mi-input .input-text {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 16px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  line-height: 18px;
+  background: #fff;
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+}
+
+.address-modal .mi-dialog .body .item .mi-input-active .input-label {
+  top: -7px;
+  font-size: 12px;
+  background: #fff;
+}
+
+.address-modal .mi-dialog .body .item .mr {
+  margin-right: 14px;
+}
+
+.address-modal .mi-dialog .footer {
+  height: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.address-modal .mi-dialog .footer .btn {
+  display: inline-block;
+  width: 158px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #b0b0b0;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  color: #b0b0b0;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  outline: none;
+}
+
+.address-modal .mi-dialog .footer .btn-primary {
+  background: #ff6700;
+  border-color: #ff6700;
+  color: #fff;
+}
+
+.address-modal .mi-dialog .footer .mr {
+  margin-right: 14px;
+}
+/*# sourceMappingURL=index.css.map */

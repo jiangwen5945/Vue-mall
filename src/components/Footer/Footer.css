@@ -1,9 +1,10 @@
 .clearfix:after {
   display: block;
-  content: '.';
+  content: ".";
   height: 0;
   line-height: 0;
   clear: both;
+  visibility: hidden;
 }
 
 .overflow {
@@ -11,6 +12,51 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.btn {
+  display: inline-block;
+  width: 158px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #b0b0b0;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  color: #b0b0b0;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.btn-primary {
+  background: #ff6700;
+  border-color: #ff6700;
+  color: #fff;
+}
+
+.btn-normal {
+  background: #fff;
+  border-color: #ff6700;
+  color: #ff6700;
+}
+
+.btn-contract {
+  margin-right: 5px;
+}
+
+.btn-line-gray {
+  border-color: #b0b0b0;
+  background: #fff;
+  color: #b0b0b0;
+}
+
+.btn-small {
+  width: 118px;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
 }
 
 .footer-container {
@@ -30,17 +76,11 @@
   height: 80px;
   position: relative;
   float: left;
+  color: #616161;
 }
 
-.footer-container .footer-service li a {
-  display: block;
-  width: 243px;
-  height: 80px;
-  float: left;
-  line-height: 80px;
-  text-align: center;
-  color: #616161;
-  font-size: 16px;
+.footer-container .footer-service li:hover {
+  color: #ff6700;
 }
 
 .footer-container .footer-service li:not(:last-child)::after {
@@ -54,12 +94,13 @@
   left: 243px;
 }
 
-.footer-container .footer-service li:hover a {
-  color: #ff6700;
-}
-
-.footer-container .footer-service li:hover i {
-  color: #ff6700;
+.footer-container .footer-service li a {
+  width: 243px;
+  height: 80px;
+  float: left;
+  line-height: 80px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .footer-container .footer-service li i {
@@ -68,7 +109,7 @@
   top: 27px;
   left: 37px;
   font-size: 24px;
-  color: #868686;
+  line-height: 24px;
 }
 
 .footer-container .footer-links {
@@ -141,7 +182,7 @@
   width: 240px;
 }
 
-.footer-container .footer-links .l-box a i {
+.footer-container .footer-links .l-box i {
   color: #ff6700;
   font-size: 12px;
   display: block;
@@ -156,11 +197,7 @@
   border: 1px solid #ff6700;
 }
 
-.footer-container .footer-links .l-box a i span {
-  margin-left: 3px;
-}
-
-.footer-container .footer-links .l-box a:hover i {
+.footer-container .footer-links .l-box i:hover {
   color: #fff;
   background: #ff6700;
 }

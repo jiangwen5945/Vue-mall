@@ -67,21 +67,17 @@
             font-weight: 400;
             line-height: 32px;
         }
-        a {
+        .close {
             position: absolute;
             top: 18px;
             right: 18px;
-            display: block;
-            width: 30px;
-            height: 30px;
-            line-height: 28px;
-            background: #e0e0e0;
-            color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 18px;
-            &:hover {
-                background: #ff6700;
+            i {
+                font-size: 28px;
+                line-height: 28px;
+                color: #afafaf;
+                &:hover {
+                    color: #ff6700;
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 <template>
   <div class="video-card">
-    <div class="video-box" @click="showShade">
+    <div class="video-box" @click="isShow(true)">
       <div class="img-wrapper">
         <img :src="video.url" />
         <i class="iconfont icon-iconfontplay2"></i>
@@ -9,11 +9,13 @@
       <p class="desc">{{video.desc}}</p>
     </div>
     <!-- 视频内容 -->
-    <shade v-if="true" :isShow="isShow" @getState="getState">
+    <shade v-if="true" :show="show"  v-bind="$attrs">
       <div class="player">
         <div class="player-top">
           <h3>{{video.title}}</h3>
-          <a @click="hideShade" class="close">×</a>
+          <span class="close" @click="isShow(false)">
+            <i class="iconfont icon-roundclosefill"></i>
+          </span>
         </div>
       </div>
     </shade>
@@ -27,30 +29,24 @@ export default {
   props: {
     video: {
       type: Object,
-      default: function() {
+      default: function () {
         return {};
-      }
-    }
+      },
+    },
   },
   data() {
     return {
-      isShow: false
+      show: false,
     };
   },
   components: {
-    Shade
+    Shade,
   },
   methods: {
-    showShade() {
-      this.isShow = true;
+    isShow(e) {
+      this.show = e;
     },
-    hideShade() {
-      this.isShow = false;
-    },
-    getState(e) {
-      this.isShow = e;
-    }
-  }
+  },
 };
 </script>
 <style lang='scss' scoped>
