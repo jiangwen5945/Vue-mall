@@ -183,7 +183,7 @@ export default {
     init() {
       let productId = this.$route.query.productId;
       this.$axios
-        .get(`${this.$api}goods/productDefault`, {
+        .get(`${this.$api}/goods/productDefault`, {
           params: { productId: productId },
         })
         .then((res) => {
